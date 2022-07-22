@@ -1,13 +1,13 @@
-import { MigrationInterface, QueryRunner, Table, TableColumn } from "typeorm";
+import { MigrationInterface, QueryRunner, TableColumn } from 'typeorm';
 
-export class AlterUserAddAvatar1652464668771 implements MigrationInterface {
+export class AlterUserAddAvatar1636512262985 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.addColumn(
-      "users",
+      'users',
       new TableColumn({
-        name: "avatar",
-        type: "varchar",
-        isNullable: true,
+        name: 'avatar'
+        , type: 'varchar'
+        , isNullable: true
       }),
     );
   }
