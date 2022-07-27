@@ -1,8 +1,7 @@
 import { getRepository, Repository } from "typeorm";
 
 import { ICreateSpecificationDTO, ISpecificationsRepository } from "@modules/cars/repositories/ISpecificationsRepository";
-
-import { Specification } from "../entities/Specification";
+import { Specification } from "@modules/cars/infra/typeorm/entities/Specification";
 
 class SpecificationsRepository implements ISpecificationsRepository {
   private repository: Repository<Specification>
@@ -26,6 +25,10 @@ class SpecificationsRepository implements ISpecificationsRepository {
     });
 
     return specification;
+  }
+
+  findByIds(ids: string[]): Promise<Specification[]> {
+    throw new Error("Method not implemented.");
   }
 }
 
