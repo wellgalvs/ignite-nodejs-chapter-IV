@@ -70,6 +70,10 @@ class CarsRepository implements ICarsRepository {
     return cars;
   }
 
+  findById(id: string): Promise<Car> {
+    throw new Error("Method not implemented.");
+  }
+
 }
 
 export { CarsRepository };
