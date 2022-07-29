@@ -1,8 +1,7 @@
 import { getRepository, Repository } from "typeorm";
 
 import { ICarsImagesRepository } from "@modules/cars/repositories/ICarsImagesRepository";
-
-import { CarImage } from "../entities/CarImage";
+import { CarImage } from "@modules/cars/infra/typeorm/entities/CarImage";
 
 class CarsImagesRepository implements ICarsImagesRepository {
   private repository: Repository<CarImage>;
@@ -19,7 +18,6 @@ class CarsImagesRepository implements ICarsImagesRepository {
 
     return carImage;
   }
-
 }
 
 export { CarsImagesRepository };
